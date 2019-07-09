@@ -18,3 +18,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-enter-active {
+  transition: opacity 1.5s;
+}
+.v-enter {
+  opacity: 0;
+}
+</style>
