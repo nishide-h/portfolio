@@ -4,6 +4,11 @@
       <h1>Profile</h1>
       <table>
         <tr>
+          <th colspan="2">
+            <img :src="gravatarUrl">
+          </th>
+        </tr>
+        <tr>
           <th>Full Name</th>
           <td>{{ fullname }}</td>
         </tr>
@@ -25,11 +30,13 @@
 </template>
 
 <script>
+import gravatar from '../../node_modules/gravatar'
 export default {
   name: 'Profile',
   title: 'Profile',
   data () {
     return {
+      gravatarUrl: gravatar.url('nishide.h@gmail.com'),
       fullname: 'Nishide Hirokazu',
       from: 'Kyoto',
       email: 'nishide.h@gmail.com',
