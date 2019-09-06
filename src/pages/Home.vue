@@ -1,5 +1,6 @@
 <template>
   <transition appear>
+    <img src="../assets/logo.png">
     <div id="hello">
       <h1>{{ msg }}</h1>
       <h2>This portfolio is built with Vue.js + Webpack + HTML5 + CSS3.</h2>
