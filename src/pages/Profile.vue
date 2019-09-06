@@ -1,7 +1,15 @@
 <template>
   <transition appear>
     <div id="profile">
-      <h1>Profile</h1>
+      <h2>About Me</h2>
+      <p>
+        システムエンジニア、プログラマーを１０年経験。<br>
+        フロントエンドの開発・保守をAdobe FlexAIRでやっておりました。<br>
+        現在はアジャイル開発を行いたくRuby Railsを学習中。<br>
+        好きな言葉は「人生日々勉強やね」
+      </p>
+
+      <h2>PERSONAL DETAILS</h2>
       <table>
         <tr>
           <th colspan="2">
