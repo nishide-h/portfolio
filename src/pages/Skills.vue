@@ -5,56 +5,68 @@
       <div class="container">
         <div class="items-box">
           <h3>Language</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/Ruby.png" />
+          <div v-for="item in languageItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">Ruby</div>
           </div>
         </div>
         <div class="items-box">
           <h3>Front End</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/AdobeAIR.jpeg" />
+          <div v-for="item in frontendItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">Flex/AIR</div>
           </div>
         </div>
         <div class="items-box">
           <h3>Server Side</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/rails-logo.svg" />
+          <div v-for="item in backendItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">Ruby on Rails</div>
           </div>
         </div>
         <div class="items-box">
           <h3>DataBase</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/Oracle.png" />
+          <div v-for="item in databaseItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">Oracle</div>
           </div>
         </div>
         <div class="items-box">
           <h3>OS</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/macOS.jpg" />
+          <div v-for="item in osItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">MacOS X</div>
           </div>
         </div>
         <div class="items-box">
           <h3>Tools</h3>
-          <div class="item">
-            <div class="icon">
-              <img class="img" src="../../static/GitHub-Mark.png" />
+          <div v-for="item in toolItems" :key="item.id">
+            <div class="item">
+              <div class="icon">
+                <img class="img" :src="item.icon" />
+              </div>
+              <div class="title">{{ item.title }}</div>
             </div>
-            <div class="title">GitHub</div>
           </div>
         </div>
       </div>
@@ -63,16 +75,31 @@
 </template>
 
 <script>
-module.exports = {
+export default {
   data: function () {
     return {
-      items: [
-        { icon: '../../static/rails-logo.svg', title: 'Ruby on Rails', experience: '1月' }
+      languageItems: [
+        { id: 0, icon: '../../static/Ruby.png', title: 'Ruby', experience: '3年' }
+      ],
+      frontendItems: [
+        { id: 0, icon: '../../static/AdobeAIR.jpeg', title: 'Flex/AIR', experience: '7年' }
+      ],
+      backendItems: [
+        { id: 0, icon: '../../static/rails-logo.svg', title: 'Ruby on Rails', experience: '1月' }
+      ],
+      databaseItems: [
+        { icon: '../../static/Oracle.png', title: 'Oracle11g', experience: '3年' },
+        { icon: '../../static/Oracle.png', title: 'Oracle12c', experience: '1年' }
+      ],
+      osItems: [
+        { icon: '../../static/macOS.jpg', title: 'MacOS X', experience: '3年' }
+      ],
+      toolItems: [
+        { icon: '../../static/GitHub-Mark.png', title: 'GitHub', experience: '4年' }
       ]
     }
   }
 }
-
 </script>
 
 <style>
